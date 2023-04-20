@@ -1,0 +1,82 @@
+body {
+  margin: 0 0 0 0;
+  padding-top: 35px;
+  padding-left: 40px;
+  padding-bottom: 35px;
+  background-color: rgb(249,249,249);
+
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  height: 100px;
+}
+
+
+[id="heart"] {
+  position: absolute;
+  left: -100vw;
+}
+
+[for="heart"] {
+  color:rgb(172, 165, 165);
+  cursor: pointer;
+  font-size: 2em;
+  align-self: center;  
+  transition: color 0.2s ease-in-out;
+}
+
+[for="heart"]:hover {
+  color:rgb(172, 165, 165);
+}
+
+[for="heart"]::selection {
+  color: none;
+  background: transparent;
+}
+
+[for="heart"]::moz-selection {
+  color: none;
+  background: transparent;
+}
+
+[id="heart"]:checked + label {
+  color: #e2264d;
+  will-change: font-size;
+}
+
+
+@keyframes heart {0%, 17.5% {font-size: 0;}}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;   
+  column-gap: 38px;
+  row-gap: 20px;  
+}
+
+.art-grid-info {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.heart-shape {
+  display: inline-block;
+  margin-top: 0;
+}
+
+@media (max-width: 750px) {
+  .art-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width:999px) {
+  .art-grid {
+    grid-template-columns: 1fr 1fr 1fr; }
+}
+
+@media (min-width: 1000px) {
+  .art-grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
